@@ -110,7 +110,7 @@ Here is an overview of the known differences:
   without taking into account any differences between Python regexes and
   the regexes supported by JSON Schema.
 
-* BooleanField and NullBooleanField: the serializer accepts values such
+* BooleanField: the serializer accepts values such
   as 0, 1, "0", "1", "true", "false" in addition to the JSON ``true`` and
   ``false``. JSON Schema is strict and only accepts the real ``true``
   and ``false``.

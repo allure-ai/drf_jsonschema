@@ -51,22 +51,6 @@ class BooleanFieldNotRequired(serializers.Serializer):
 
 
 @register
-class NullBooleanFieldBasic(serializers.Serializer):
-    foo = serializers.NullBooleanField()
-
-    json_schema = {
-        "type": "object",
-        "properties": {
-            "foo": {"type": ["boolean", "null"], "title": "Foo"}
-        },
-        "required": ["foo"]
-    }
-
-    valid = [{"foo": True}, {"foo": False}, {"foo": None}]
-    invalid = [{}, {"foo": "something"}, {"foo": 10}]
-
-
-@register
 class CharFieldBasic(serializers.Serializer):
     foo = serializers.CharField()
 
